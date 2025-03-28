@@ -166,9 +166,11 @@ void ofApp::draw()
     ofDrawCircle(redBallPos, redBallRadius);
 
     // Debug info
+    /*
     ofSetColor(0);
     font.drawString("Notes: " + ofToString(notePositions.size()), 20, 20);
     font.drawString("Red ball: " + ofToString(redBallPos.x, 1) + ", " + ofToString(redBallPos.y, 1), 20, 40);
     font.drawString("Target: " + ofToString(redBallTarget.x, 1) + ", " + ofToString(redBallTarget.y, 1), 20, 60);
     font.drawString("Interpolation: " + ofToString(redBallInterpolation, 2), 20, 80);
+    */
 }
