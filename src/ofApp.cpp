@@ -8,8 +8,8 @@ void ofApp::setup()
 
     setupOSC();
 
-    font.load("verdana.ttf", 12);
-    largeFont.load("verdana.ttf", 72); // Carica il font grande
+    font.load("Verdana_Bold.ttf", 12);
+    largeFont.load("Verdana_Bold.ttf", 72); // Carica il font grande
 
     redBallPos.set(-10.0f, -10.0f);
     redBallTarget = redBallPos;  // Inizializza il target con la stessa posizione
@@ -129,7 +129,7 @@ void ofApp::draw()
     {
         // Centra la scritta "Infinity Bach"
         ofSetColor(0);
-        string message = "Infinity Bach";
+        string message = "infinity Bach";
         float textWidth = largeFont.stringWidth(message);
         float textHeight = largeFont.stringHeight(message);
 
