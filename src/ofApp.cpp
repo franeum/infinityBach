@@ -8,8 +8,8 @@ void ofApp::setup()
 
     setupOSC();
 
-    font.load("Verdana_Bold.ttf", 12);
-    largeFont.load("Verdana_Bold.ttf", 72); // Carica il font grande
+    font.load("Verdana_Bold_Italic.ttf", 72);
+    largeFont.load("Verdana_Bold_Italic.ttf", 84); // Carica il font grande
 
     redBallPos.set(-10.0f, -10.0f);
     redBallTarget = redBallPos;  // Inizializza il target con la stessa posizione
@@ -120,6 +120,13 @@ void ofApp::processOSC()
                 redBallInterpolation = 0.0f;
             }
         }
+        else if (m.getAddress() == "/iteration" && m.getNumArgs() >= 1)
+        {
+            if (m.getArgType(0) == OFXOSC_TYPE_FLOAT)
+            {
+                n_iteration = (int)(m.getArgAsFloat(0));
+            }
+        }
     }
 }
 
@@ -173,4 +180,8 @@ void ofApp::draw()
     font.drawString("Target: " + ofToString(redBallTarget.x, 1) + ", " + ofToString(redBallTarget.y, 1), 20, 60);
     font.drawString("Interpolation: " + ofToString(redBallInterpolation, 2), 20, 80);
     */
+
+    ofSetColor(250, 250, 250, 240);
+    float s_size = font.stringWidth("iteration: ");
+    font.drawString("iteration: " + ofToString(n_iteration), ofGetWidth() * 0.5f - (s_size * 0.5f), ofGetHeight() - 100);
 }

@@ -30,8 +30,10 @@ private:
 	float redBallRadius = 16.f;
 	bool initialized = false;
 	int globalTotalNotes;
-	float interpolationSpeed = 0.01f;
+	float interpolationSpeed = 0.001f;
 	float interpolationRedSpeed = 0.04f;
 
 	ofTrueTypeFont largeFont;
+
+	int n_iteration = 0;
 };
