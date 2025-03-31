@@ -181,7 +181,7 @@ void ofApp::draw()
     font.drawString("Interpolation: " + ofToString(redBallInterpolation, 2), 20, 80);
     */
 
-    ofSetColor(250, 250, 250, 240);
+    ofSetColor(255, 255, 255, 220);
     float s_size = font.stringWidth("iteration: ");
-    font.drawString("iteration: " + ofToString(n_iteration), ofGetWidth() * 0.5f - (s_size * 0.5f), ofGetHeight() - 100);
+    font.drawString("iteration: " + ofToString(n_iteration), ofGetWidth() * 0.5f - (s_size * 0.5f), ofGetHeight() - 200.0f);
 }
