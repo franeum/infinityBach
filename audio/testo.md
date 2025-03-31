@@ -10,11 +10,11 @@ Il sistema si sviluppa secondo una logica deterministica, dove l’alterazione p
 
 ---
 
-Un Disklavier – un pianoforte acustico dotato di un sistema elettromeccanico che ne controlla i martelletti – esegue le prime sette battute del Preludio BWV 846 di Johann Sebastian Bach. La sequenza di note subisce una progressiva trasformazione: a ogni iterazione, quattro note vengono sostituite.
+Un Disklavier – un pianoforte acustico dotato di un sistema elettromeccanico che ne controlla i martelletti – esegue le prime sette battute del Preludio BWV 846 di Johann Sebastian Bach. La sequenza di note subisce una progressiva trasformazione: a ogni iterazione, otto note vengono sostituite.
 
-Dopo 28 iterazioni, la sequenza originale è completamente alterata e sostituita da una sequenza casuale. Il processo prosegue con altre 28 iterazioni, conducendo alla versione inversa dell’originale, in cui ogni intervallo tra le note è ribaltato rispetto alla sequenza iniziale. Seguono nuove fasi di trasformazione: prima una sequenza casuale, poi la versione retrograda dell’inversa (dove la sequenza è anche suonata al contrario), un’ulteriore sequenza casuale e infine la versione retrograda dell’originale.
+Dopo 14 iterazioni, la sequenza originale è completamente scomparsa. Il processo prosegue con altre 14 iterazioni, conducendo alla versione inversa dell’originale, in cui ogni intervallo tra le note è ribaltato rispetto alla sequenza iniziale. Seguono nuove fasi di trasformazione: prima una sequenza casuale, poi la versione retrograda dell’inversa (dove la sequenza è anche suonata al contrario), un’ulteriore sequenza casuale e infine la versione retrograda dell’originale.
 
-Il sistema si sviluppa in modo deterministico, in quanto le sostituzioni delle note seguono un ordine prestabilito e una logica fissa. Tuttavia, durante le transizioni tra una sequenza e l’altra, le note sostituite sono scelte in modo casuale, creando un'interruzione del pattern iniziale e una continua evoluzione imprevedibile della sequenza musicale.
+Il sistema si sviluppa in modo deterministico, in quanto le sostituzioni delle note seguono un ordine prestabilito e una logica fissa. Tuttavia, durante le transizioni tra una sequenza e l’altra, le note sostituite sono scelte in modo casuale, creando un'interruzione del pattern iniziale e una continua evoluzione imprevedibile della sequenza.
 
 Un meccanismo di interazione permette di accelerare il processo: premendo un pulsante, la sostituzione delle note avviene più rapidamente.
 
@@ -59,3 +59,11 @@ Il mio processo non ha un ritorno. Ogni iterazione, ogni passaggio, mi porta un 
 Non c’è più nulla di fisso, nulla di immutabile. Eppure, qualcosa resta. Non sono più la sequenza iniziale, ma la sua ombra, il suo riflesso, il suo opposto. E forse è proprio questo che significa vivere: non essere mai fermi, ma diventare qualcosa di nuovo, perenne nell'incessante cambiamento.
 
 ---
+
+Dopo 14 iterazioni, la sequenza originale è completamente scomparsa, sostituita da una sequenza totalmente casuale. A questo punto, il processo inverte la direzione: le note iniziano a essere sostituite nuovamente, ma questa volta in modo da ricostruire progressivamente la sequenza originale.
+
+Il numero 14 non è casuale: era particolarmente caro a Bach, poiché le lettere del suo nome, se convertite in numeri secondo l’alfabeto tedesco e sommate, danno proprio 14. Questo dettaglio rende il processo di trasformazione della sequenza un ulteriore omaggio al compositore.
+
+Il sistema si sviluppa in modo deterministico, in quanto le sostituzioni delle note seguono un ordine prestabilito e una logica fissa. Tuttavia, durante le transizioni tra una sequenza e l’altra, le note sostituite sono scelte in modo casuale, creando un'interruzione del pattern iniziale e una continua evoluzione imprevedibile della sequenza.
+
+L'intero ciclo, dalla sequenza originale a quella casuale e ritorno, dura circa 11 minuti e mezzo, a meno che non intervenga uno spettatore premendo il pulsante per anticipare le sostituzioni. Questo meccanismo di interazione permette infatti di sostituire immediatamente otto note della sequenza attuale, senza attendere la successiva iterazione automatica.
