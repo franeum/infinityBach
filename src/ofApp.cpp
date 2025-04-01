@@ -9,11 +9,11 @@ void ofApp::setup()
     setupOSC();
 
     font.load("Verdana_Bold_Italic.ttf", 72);
-    largeFont.load("Verdana_Bold_Italic.ttf", 84); // Carica il font grande
+    largeFont.load("Verdana_Bold.ttf", 108);
 
     redBallPos.set(-10.0f, -10.0f);
-    redBallTarget = redBallPos;  // Inizializza il target con la stessa posizione
-    redBallInterpolation = 1.0f; // Nessuna interpolazione iniziale
+    redBallTarget = redBallPos;
+    redBallInterpolation = 1.0f;
 }
 
 void ofApp::setupOSC()
@@ -25,20 +25,20 @@ void ofApp::update()
 {
     processOSC();
 
-    // Interpolazione delle note
+    // Fisica a molla per le palline nere
     if (initialized)
     {
         for (int i = 0; i < notePositions.size(); i++)
         {
-            if (interpolationProgress[i] < 1.0f)
-            {
-                interpolationProgress[i] += interpolationSpeed;
-                notePositions[i].y = ofLerp(notePositions[i].y, noteTargets[i].y, interpolationProgress[i]);
-            }
+            ofVec2f displacement = noteTargets[i] - notePositions[i];
+            ofVec2f springForce = displacement * stiffness[i];
+            noteVelocities[i] += springForce / mass;
+            noteVelocities[i] *= damping;
+            notePositions[i] += noteVelocities[i];
         }
     }
 
-    // Interpolazione pallina rossa
+    // Interpolazione lineare per la pallina rossa
     if (redBallInterpolation < 1.0f)
     {
         redBallInterpolation += interpolationRedSpeed;
@@ -60,10 +60,15 @@ void ofApp::processOSC()
             globalTotalNotes = totalNotes;
             if (totalNotes > 0)
             {
+                stiffness.resize(totalNotes);
+
+                for (auto &val : stiffness)
+                    val = ofRandom(0.02, 0.03);
+
                 notePositions.resize(totalNotes);
                 noteTargets.resize(totalNotes);
+                noteVelocities.resize(totalNotes, ofVec2f(0, 0)); // Inizializza velocità
                 activeNotes.resize(totalNotes, false);
-                interpolationProgress.resize(totalNotes, 1.0f);
                 colors.resize(totalNotes, 0.0f);
 
                 for (int i = 0; i < totalNotes; i++)
@@ -86,15 +91,13 @@ void ofApp::processOSC()
                 int index = (int)m.getArgAsFloat(0);
                 if (index >= 0 && index < notePositions.size())
                 {
-                    notePositions[index].y = m.getArgAsFloat(1);
+                    // Imposta solo il target, la fisica si occuperà del movimento
                     noteTargets[index].y = m.getArgAsFloat(2);
-                    interpolationProgress[index] = 0.0f;
                     activeNotes[index] = (m.getArgAsFloat(3) > 0.5f);
                     colors[index] = m.getArgAsFloat(4) == 0.0f ? 0.0f : 160.0f;
                 }
             }
         }
-        // Nuovo formato per la pallina rossa: /redball x_start y_start x_end y_end
         else if (m.getAddress() == "/redball" && m.getNumArgs() >= 4)
         {
             if (m.getArgType(0) == OFXOSC_TYPE_FLOAT &&
@@ -102,11 +105,10 @@ void ofApp::processOSC()
                 m.getArgType(2) == OFXOSC_TYPE_FLOAT &&
                 m.getArgType(3) == OFXOSC_TYPE_FLOAT)
             {
-                // Mappa la x come per le note (se necessario)
                 float x_start = ofMap(m.getArgAsFloat(0), 0, globalTotalNotes - 1, 50, ofGetWidth() - 50);
                 float x_end = ofMap(m.getArgAsFloat(2), 0, globalTotalNotes - 1, 50, ofGetWidth() - 50);
 
-                // Imposta la posizione corrente
+                // Imposta la posizione corrente (inizio interpolazione)
                 redBallPos.set(
                     ofClamp(x_start, 0, ofGetWidth()),
                     ofClamp(m.getArgAsFloat(1), 0, ofGetHeight()));
@@ -136,7 +138,7 @@ void ofApp::draw()
     {
         // Centra la scritta "Infinity Bach"
         ofSetColor(0);
-        string message = "infinity Bach";
+        string message = "infinity.Bach";
         float textWidth = largeFont.stringWidth(message);
         float textHeight = largeFont.stringHeight(message);
 

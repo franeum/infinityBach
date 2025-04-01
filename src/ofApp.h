@@ -16,12 +16,13 @@ private:
 	ofxOscReceiver oscReceiver;
 	vector<ofVec2f> notePositions;
 	vector<ofVec2f> noteTargets;
-	vector<float> interpolationProgress;
+	vector<ofVec2f> noteVelocities; // Per le palline nere (effetto molla)
 	vector<float> colors;
 
 	ofVec2f redBallPos;
-	ofVec2f redBallTarget;		// Aggiunto per il target della pallina rossa
-	float redBallInterpolation; // Progresso interpolazione pallina rossa
+	ofVec2f redBallTarget;
+	float redBallInterpolation;			 // Ripristiniamo l'interpolazione per la pallina rossa
+	float interpolationRedSpeed = 0.04f; // Velocità interpolazione pallina rossa
 
 	vector<bool> activeNotes;
 
@@ -30,10 +31,13 @@ private:
 	float redBallRadius = 16.f;
 	bool initialized = false;
 	int globalTotalNotes;
-	float interpolationSpeed = 0.001f;
-	float interpolationRedSpeed = 0.04f;
+
+	// Parametri fisici solo per le palline nere
+	// float stiffness = 0.025f; // Rigidità della molla
+	vector<float> stiffness;
+	float damping = 0.94f; // Smorzamento
+	float mass = 4.0f;	   // Massa
 
 	ofTrueTypeFont largeFont;
-
 	int n_iteration = 0;
 };
