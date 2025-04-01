@@ -27,8 +27,8 @@ private:
 	vector<bool> activeNotes;
 
 	ofTrueTypeFont font;
-	float circleRadius = 10.f;
-	float redBallRadius = 16.f;
+	float circleRadius = 12.f;
+	float redBallRadius = 20.f;
 	bool initialized = false;
 	int globalTotalNotes;
 
@@ -36,7 +36,7 @@ private:
 	// float stiffness = 0.025f; // Rigidità della molla
 	vector<float> stiffness;
 	float damping = 0.94f; // Smorzamento
-	float mass = 4.0f;	   // Massa
+	float mass = 2.0f;	   // Massa
 
 	ofTrueTypeFont largeFont;
 	int n_iteration = 0;

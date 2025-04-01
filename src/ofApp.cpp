@@ -149,10 +149,22 @@ void ofApp::draw()
     }
 
     // Linee di connessione
-    ofSetColor(80, 80, 80, 100);
-    ofSetLineWidth(1.f);
+    // ofSetColor(80, 80, 80, 100);
+    // ofSetLineWidth(1.f);
+
     for (size_t i = 0; i < notePositions.size() - 1; i++)
     {
+
+        float x1 = notePositions[i].x;
+        float y1 = notePositions[i].y;
+        float x2 = notePositions[i + 1].x;
+        float y2 = notePositions[i + 1].y;
+
+        float dist = ofDist(x1, y1, x2, y2);
+        float alpha = ofMap(dist, 10.0f, ofGetHeight() * 0.5f, 100.0f, 30.0f);
+        ofSetLineWidth((alpha - 30.0f) / 70.0f * 1.4f + 0.1f);
+        ofSetColor(80, alpha);
+
         ofDrawLine(notePositions[i], notePositions[i + 1]);
     }
 
