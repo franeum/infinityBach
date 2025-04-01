@@ -32,7 +32,7 @@ void ofApp::update()
         {
             ofVec2f displacement = noteTargets[i] - notePositions[i];
             ofVec2f springForce = displacement * stiffness[i];
-            noteVelocities[i] += springForce / mass;
+            noteVelocities[i] += springForce / mass[i];
             noteVelocities[i] *= damping;
             notePositions[i] += noteVelocities[i];
         }
@@ -64,6 +64,11 @@ void ofApp::processOSC()
 
                 for (auto &val : stiffness)
                     val = ofRandom(0.02, 0.03);
+
+                mass.resize(totalNotes);
+
+                for (auto &val : mass)
+                    val = ofRandom(2.5f, 6.0f);
 
                 notePositions.resize(totalNotes);
                 noteTargets.resize(totalNotes);
