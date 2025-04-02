@@ -60,10 +60,12 @@ Non c’è più nulla di fisso, nulla di immutabile. Eppure, qualcosa resta. Non
 
 ---
 
-Dopo 14 iterazioni, la sequenza originale è completamente scomparsa, sostituita da una sequenza totalmente casuale. A questo punto, il processo inverte la direzione: le note iniziano a essere sostituite nuovamente, ma questa volta in modo da ricostruire progressivamente la sequenza originale.
+Un Disklavier – un pianoforte acustico dotato di un sistema elettromeccanico che ne controlla i martelletti – esegue progressivamente l'intero Preludio BWV 846 di Johann Sebastian Bach, suddiviso in sei frammenti da sette battute ciascuno.
 
-Il numero 14 non è casuale: era particolarmente caro a Bach, poiché le lettere del suo nome, se convertite in numeri secondo l’alfabeto tedesco e sommate, danno proprio 14. Questo dettaglio rende il processo di trasformazione della sequenza un ulteriore omaggio al compositore.
+Si inizia con il primo frammento, che viene eseguito integralmente nella sua forma originale. Appena terminata l’esecuzione della prima iterazione, sedici note vengono sostituite e il frammento viene riprodotto nuovamente con questa modifica. A ogni iterazione successiva, altre sedici note vengono sostituite, portando gradualmente la sequenza originale a trasformarsi in una sequenza completamente casuale dopo 7 iterazioni. Da qui, il processo prosegue nella direzione opposta: ulteriori 7 iterazioni modificano la sequenza casuale fino a ricostruire il secondo frammento del preludio. Questo ciclo si ripete: ogni frammento del preludio si dissolve progressivamente nella casualità per poi trasformarsi gradualmente nel frammento successivo, fino al completamento dell’intero preludio.
 
-Il sistema si sviluppa in modo deterministico, in quanto le sostituzioni delle note seguono un ordine prestabilito e una logica fissa. Tuttavia, durante le transizioni tra una sequenza e l’altra, le note sostituite sono scelte in modo casuale, creando un'interruzione del pattern iniziale e una continua evoluzione imprevedibile della sequenza.
+Il sistema si sviluppa in modo deterministico, in quanto le sostituzioni delle note seguono un ordine prestabilito e una logica fissa. Tuttavia, durante le transizioni tra una sequenza e l’altra, le note sostituite sono scelte in modo probabilistico, creando una continua evoluzione imprevedibile della sequenza.
 
-L'intero ciclo, dalla sequenza originale a quella casuale e ritorno, dura circa 11 minuti e mezzo, a meno che non intervenga uno spettatore premendo il pulsante per anticipare le sostituzioni. Questo meccanismo di interazione permette infatti di sostituire immediatamente otto note della sequenza attuale, senza attendere la successiva iterazione automatica.
+Nella visualizzazione del processo, i pallini neri rappresentano le note della sequenza originale, mentre i pallini grigi rappresentano le note generate dal sistema.
+
+L'intero ciclo dura circa 34 minuti e mezzo, a meno che non intervenga uno spettatore premendo il pulsante per anticipare le sostituzioni. Normalmente, le sostituzioni avvengono sempre alla fine dell'esecuzione della sequenza corrente. Tuttavia, premendo il pulsante, si innesca un'ulteriore sostituzione di sedici note, mantenendo invariata la logica del processo ma accelerandone l'evoluzione.
