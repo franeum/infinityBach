@@ -108,7 +108,8 @@ void ofApp::processOSC()
             if (m.getArgType(0) == OFXOSC_TYPE_FLOAT &&
                 m.getArgType(1) == OFXOSC_TYPE_FLOAT &&
                 m.getArgType(2) == OFXOSC_TYPE_FLOAT &&
-                m.getArgType(3) == OFXOSC_TYPE_FLOAT)
+                m.getArgType(3) == OFXOSC_TYPE_FLOAT &&
+                m.getArgType(4) == OFXOSC_TYPE_FLOAT)
             {
                 float x_start = ofMap(m.getArgAsFloat(0), 0, globalTotalNotes - 1, 50, ofGetWidth() - 50);
                 float x_end = ofMap(m.getArgAsFloat(2), 0, globalTotalNotes - 1, 50, ofGetWidth() - 50);
@@ -125,6 +126,7 @@ void ofApp::processOSC()
 
                 // Resetta l'interpolazione
                 redBallInterpolation = 0.0f;
+                redballVisible = (int)(m.getArgAsFloat(4));
             }
         }
         else if (m.getAddress() == "/iteration" && m.getNumArgs() >= 1)
@@ -188,7 +190,9 @@ void ofApp::draw()
     }
 
     // Pallina rossa (con interpolazione)
-    ofSetColor(255, 0, 0, 128);
+    int redballColor = redballVisible == 1 ? 128 : 0;
+
+    ofSetColor(255, 0, 0, redballColor);
     ofDrawCircle(redBallPos, redBallRadius);
 
     // Debug info
@@ -201,6 +205,6 @@ void ofApp::draw()
     */
 
     ofSetColor(255, 255, 255, 220);
-    float s_size = font.stringWidth("iteration: ");
-    font.drawString("iteration: " + ofToString(n_iteration), ofGetWidth() * 0.5f - (s_size * 0.5f), ofGetHeight() - 200.0f);
+    float s_size = font.stringWidth("sequence: ");
+    font.drawString("sequence: " + ofToString(n_iteration), ofGetWidth() * 0.5f - (s_size * 0.5f), ofGetHeight() - 200.0f);
 }

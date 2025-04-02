@@ -41,4 +41,6 @@ private:
 
 	ofTrueTypeFont largeFont;
 	int n_iteration = 0;
+
+	int redballVisible = 0;
 };
