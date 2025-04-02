@@ -69,3 +69,18 @@ Il sistema si sviluppa in modo deterministico, in quanto le sostituzioni delle n
 Nella visualizzazione del processo, i pallini neri rappresentano le note della sequenza originale, mentre i pallini grigi rappresentano le note generate dal sistema.
 
 L'intero ciclo dura circa 34 minuti e mezzo, a meno che non intervenga uno spettatore premendo il pulsante per anticipare le sostituzioni. Normalmente, le sostituzioni avvengono sempre alla fine dell'esecuzione della sequenza corrente. Tuttavia, premendo il pulsante, si innesca un'ulteriore sostituzione di sedici note, mantenendo invariata la logica del processo ma accelerandone l'evoluzione.
+
+
+---
+
+
+Un Disklavier – un pianoforte acustico controllato da un sistema elettromeccanico – esegue il Preludio BWV 846 di Johann Sebastian Bach, suddiviso in sei frammenti di sette battute ciascuno. Ogni frammento attraversa un processo di trasformazione controllata, passando gradualmente dall’ordine alla casualità e viceversa.
+
+Si inizia con il primo frammento nella sua versione originale. Al termine della prima esecuzione, sedici note vengono sostituite. A ogni iterazione successiva, altre sedici note cambiano, fino a quando, dopo sette passaggi, il frammento iniziale si dissolve in una sequenza casuale. Da qui il processo si inverte: attraverso sette ulteriori sostituzioni, la sequenza casuale si trasforma fino a ricostruire il secondo frammento del preludio. Questo ciclo continua, conducendo progressivamente dal disordine alla ricostruzione di ogni frammento successivo, fino al completamento dell’intera opera.
+
+Le sostituzioni avvengono secondo un ordine deterministico, ma le note scelte per essere modificate seguono un criterio probabilistico, introducendo un elemento di variabilità nel processo.
+
+Durante l’evoluzione della sequenza, una rappresentazione visiva accompagna l’ascolto: i pallini neri indicano le note appartenenti alla sequenza originale, mentre i pallini grigi rappresentano le note generate dal sistema.
+
+L’intero ciclo dura circa 34 minuti e mezzo, salvo interventi esterni. Un pulsante consente agli spettatori di aggiungere un cambiamento immediato di sedici note non appena viene premuto, che si somma alla trasformazione naturale che avviene alla fine dell’esecuzione della sequenza corrente, accelerando il processo senza alterarne la struttura.
+
