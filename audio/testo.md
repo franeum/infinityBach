@@ -74,13 +74,33 @@ L'intero ciclo dura circa 34 minuti e mezzo, a meno che non intervenga uno spett
 ---
 
 
-Il Disklavier – un pianoforte acustico controllato da un sistema elettromeccanico – esegue il Preludio BWV 846 di Johann Sebastian Bach, suddiviso in sei frammenti di sette battute ciascuno. Ogni frammento attraversa un processo di trasformazione controllata, passando gradualmente dall’ordine alla casualità e viceversa.
+Il Disklavier – un pianoforte acustico controllato da un sistema elettromeccanico – esegue il Preludio BWV 846 di Johann Sebastian Bach, suddiviso in sei frammenti di sette battute ciascuno (112 note). Ogni frammento attraversa un processo di trasformazione controllata, passando gradualmente dall’ordine alla casualità e viceversa.
 
-Si inizia con il primo frammento nella sua versione originale. Al termine della prima esecuzione, un quarto del frammento (28 note) viene sostituito. A ogni iterazione successiva, altre ventotto note cambiano, fino a quando, dopo quattro passaggi, il frammento iniziale si dissolve in una sequenza casuale. Da qui il processo si inverte: attraverso sette ulteriori sostituzioni, la sequenza casuale si trasforma fino a ricostruire il secondo frammento del preludio. Questo ciclo continua, conducendo progressivamente dal disordine alla ricostruzione di ogni frammento successivo, fino al completamento dell’intera opera.
+Si inizia con il primo frammento nella sua versione originale. Al termine della prima esecuzione, un quarto del frammento (ventotto note) viene sostituito. A ogni iterazione successiva, altre ventotto note cambiano, fino a quando, dopo quattro passaggi, il frammento iniziale si dissolve in una sequenza casuale. Da qui il processo si inverte: attraverso ulteriori sostituzioni, la sequenza casuale si trasforma fino a ricostruire il secondo frammento del preludio. Questo ciclo continua, conducendo progressivamente dal disordine alla ricostruzione di ogni frammento successivo, fino al completamento dell’intera opera.
 
-Le sostituzioni avvengono secondo un ordine deterministico, ma le note scelte per essere modificate seguono un criterio probabilistico, introducendo un elemento di variabilità nel processo.
+Le sostituzioni avvengono secondo un ordine deterministico, ma le note scelte per essere modificate seguono un criterio probabilistico, introducendo un elemento di continua variabilità nel processo.
 
 Durante l’evoluzione della sequenza, una rappresentazione visiva accompagna l’ascolto: i pallini neri indicano le note appartenenti alla sequenza originale, mentre i pallini grigi rappresentano le note generate dal sistema.
 
-L’intero ciclo dura circa 20 minuti, salvo interventi esterni. Un pulsante consente agli spettatori di aggiungere un cambiamento immediato di ventotto note non appena viene premuto, che si somma alla trasformazione naturale che avviene alla fine dell’esecuzione della sequenza corrente, accelerando il processo senza alterarne la struttura.
+L’intero ciclo dura circa 20 minuti, salvo interventi esterni. Un pulsante consente all'ascoltatore/spettatore di aggiungere un cambiamento immediato di ventotto note non appena viene premuto, che si somma alla trasformazione naturale che avviene alla fine dell’esecuzione della sequenza corrente, accelerando il processo senza alterarne la struttura.
+
+---
+
+Il Disklavier – un pianoforte acustico controllato da un sistema elettromeccanico e, in questa occasione, pilotato in tempo reale da un computer – dà vita al Preludio BWV 846 di Bach, scomponendolo in sei frammenti da 112 note (7 battute).
+
+Ogni frammento attraversa un processo di metamorfosi: a ogni passaggio, 28 note cambiano, trasformando gradualmente l’ordine in caos. Una volta dissolto un frammento, si assiste alla ricostruzione progressiva del successivo, che emerge dal disordine nota dopo nota. Le sostituzioni seguono un disegno preciso, ma le note scelte si affidano alle leggi della probabilità, dando vita a un’evoluzione sempre diversa.
+
+A rendere visibile il suono, una rappresentazione grafica accompagna l’ascolto: pallini neri segnano le note originali, grigi quelle che emergono nel mutamento.
+
+L’intero ciclo si compie in circa 20 minuti, a meno che un ascoltatore curioso non prema il pulsante, anticipando il cambiamento di 28 note e accelerando il respiro della trasformazione.
+
+---
+
+Il Disklavier – un pianoforte acustico controllato da un sistema elettromeccanico e, in questa occasione, pilotato in tempo reale da un computer – dà vita al Preludio BWV 846 di Bach, scomponendolo in sei frammenti da 112 note (7 battute).
+
+Ogni frammento attraversa un processo di metamorfosi: a ogni passaggio, una parte del materiale cambia, trasformando gradualmente l’ordine in caos. Una volta dissolto un frammento, si assiste alla ricostruzione progressiva del seguente, che riemerge dal disordine attraverso sostituzioni successive. Le modifiche seguono un disegno preciso, ma le note scelte si affidano alle leggi della probabilità, dando vita a un’evoluzione sempre diversa.
+
+A rendere visibile il suono, una rappresentazione grafica accompagna l’ascolto: pallini neri segnano le note originali, grigi quelle che emergono nel mutamento.
+
+L’intero ciclo si compie in circa 20 minuti, a meno che un ascoltatore curioso non prema il pulsante, accelerando il respiro della trasformazione.
 
