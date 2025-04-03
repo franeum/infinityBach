@@ -22,7 +22,7 @@ private:
 	ofVec2f redBallPos;
 	ofVec2f redBallTarget;
 	float redBallInterpolation;			 // Ripristiniamo l'interpolazione per la pallina rossa
-	float interpolationRedSpeed = 0.04f; // Velocità interpolazione pallina rossa
+	float interpolationRedSpeed = 0.03f; // Velocità interpolazione pallina rossa
 
 	vector<bool> activeNotes;
 
@@ -43,4 +43,7 @@ private:
 	int n_iteration = 0;
 
 	int redballVisible = 0;
+
+	// starting countdown
+	int countDown = 0;
 };

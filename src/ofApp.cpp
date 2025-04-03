@@ -9,7 +9,7 @@ void ofApp::setup()
     setupOSC();
 
     font.load("Verdana_Bold_Italic.ttf", 72);
-    largeFont.load("Verdana_Bold.ttf", 108);
+    largeFont.load("Verdana_Bold.ttf", 84);
 
     redBallPos.set(-10.0f, -10.0f);
     redBallTarget = redBallPos;
@@ -136,6 +136,13 @@ void ofApp::processOSC()
                 n_iteration = (int)(m.getArgAsFloat(0));
             }
         }
+        else if (m.getAddress() == "/countdown" && m.getNumArgs() == 1)
+        {
+            if (m.getArgType(0) == OFXOSC_TYPE_FLOAT)
+            {
+                countDown = (int)(m.getArgAsFloat(0));
+            }
+        }
     }
 }
 
@@ -203,6 +210,11 @@ void ofApp::draw()
     font.drawString("Target: " + ofToString(redBallTarget.x, 1) + ", " + ofToString(redBallTarget.y, 1), 20, 60);
     font.drawString("Interpolation: " + ofToString(redBallInterpolation, 2), 20, 80);
     */
+
+    // countdown
+    ofSetColor(0);
+    if (countDown > 0)
+        font.drawString(ofToString(countDown), 50, ofGetHeight() - 50);
 
     ofSetColor(255, 255, 255, 220);
     float s_size = font.stringWidth("sequence: ");
