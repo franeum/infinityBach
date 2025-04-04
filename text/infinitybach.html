@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>infinity.BACH</title>
+    <style>
+        /* Font leggibili e gradevoli */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap');
+
+        img:hover {
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        body {
+            background-color: #f9f5f0;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 200;
+            /* ExtraLight per il testo */
+            font-size: 2.2rem;
+            /* Leggermente più grande per compensare il peso light */
+            line-height: 1.8;
+            /* Spaziatura extra per leggibilità */
+            color: #333;
+            /* Maggiore spaziatura tra le righe */
+            margin: 0;
+            padding: 20px;
+            /* Padding per evitare testo attaccato ai bordi */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            /* Larghezza adattabile */
+            max-width: 600px;
+            /* Limite massimo per leggibilità */
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -0.5px;
+            font-size: 2.2rem;
+            /* Titolo più grande */
+            color: #2a2a2a;
+            margin-bottom: 1.8rem;
+            text-align: center;
+            line-height: 1.3;
+            /* Spaziatura titolo ottimizzata */
+        }
+
+        p {
+            font-size: 1.2rem;
+            /* Testo più grande per mobile */
+            margin-bottom: 1.8rem;
+        }
+
+        strong {
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .signature {
+            font-style: italic;
+            text-align: right;
+            color: #777;
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Ottimizzazioni per schermi piccoli */
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.8rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+                /* Titolo leggermente più piccolo su mobile */
+            }
+
+            p {
+                font-size: 1.1rem;
+                /* Dimensione leggermente ridotta per schermi molto piccoli */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><strong>infinity.Bach</strong></h1>
+        <img src="/images/bg2.png" alt="Descrizione immagine"
+            style="width: 100%; max-width: 500px; height: auto; display: block; margin: 1.5rem auto; border-radius: 8px;">
+        <p>Il <i>Disklavier</i> – un pianoforte acustico controllato da un sistema elettromeccanico e, in questa
+            occasione,
+            pilotato in tempo reale da un computer – dà vita al <strong>Preludio BWV 846</strong> di <i>Johann Sebastian
+                Bach</i>,
+            scomponendolo in sei <i>frammenti</i> da 112 note (7 misure).</p>
+        <p>Ogni frammento attraversa un processo di metamorfosi: a ogni passaggio, una <i>parte del materiale
+                cambia</i>,
+            trasformando gradualmente l’ordine in caos. Una volta dissolto un frammento, si assiste alla
+            <i>ricostruzione</i>
+            progressiva del seguente, che riemerge dal disordine attraverso sostituzioni successive. Le modifiche
+            seguono un
+            disegno preciso, ma le note scelte si affidano alle leggi della <strong>probabilità</strong>, dando vita a
+            un’<i>evoluzione
+                sempre
+                diversa</i>.
+        </p>
+        <p>A rendere visibile il suono, una rappresentazione grafica accompagna l’ascolto: pallini <strong>neri</strong>
+            segnano le note
+            originali, <strong>grigi</strong> quelle che emergono nel mutamento.</p>
+        <p>L’intero ciclo si compie in circa 20 minuti, prima di ricominciare, a meno che un ascoltatore curioso non
+            prema
+            il <strong>pulsante blu</strong>, accelerando il respiro della trasformazione.</p>
+        <div class="signature">— Francesco Bianchi</div>
+    </div>
+</body>
+
+</html>
